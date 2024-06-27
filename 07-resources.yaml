@@ -1,12 +1,12 @@
-kind: pod
+kind: Pod
 apiVersion: v1
 metadata:
- name: resources
+  name: resources
 spec:
- containers:
- - name: nginx
-   image: nginx
-   resources:
+  containers:
+  - name: nginx
+    image: nginx
+    resources:
       # soft limit
       requests:
         cpu: "100m"
