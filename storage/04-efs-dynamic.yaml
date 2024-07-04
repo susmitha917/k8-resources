@@ -28,3 +28,14 @@ spec:
       persistentVolumeClaim:
         claimName: efs-dynamic
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: efs-dynamic
+spec:
+  selector:
+    purpose: efs-dynamic
+  ports:
+  - protocol: TCP
+    port: 80 #service-port
+    targetPort: 80
